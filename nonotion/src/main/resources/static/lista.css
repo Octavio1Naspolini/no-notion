@@ -1,0 +1,72 @@
+html,
+body {
+    background-color: white;
+    margin: 0;
+    color: black;
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    color: black;
+    text-align: left;
+    width: 50%;
+    float: left;
+}
+
+.status-icon {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.online {
+    background-color: green;
+}
+
+.offline {
+    background-color: red;
+}
+
+#nav-bar1 {
+    float: left;
+    width: 1296px;
+    min-height: 40%;
+    font-family: 'Poppins', sans-serif;
+    padding: 42px;
+}
+
+#nav-bar2 {
+    float: left;
+    width: 1296px;
+    min-height: 40%;
+    font-family: 'Poppins', sans-serif;
+    padding: 42px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+}
+
+#dados-id {
+    display: none;
+}
+
+#dados-nome {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dados {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#container {
+    align-items: center;
+    display: flex;
+    margin-left: 140px;
+}

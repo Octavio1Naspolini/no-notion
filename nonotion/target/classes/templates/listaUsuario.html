@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../lista.css">
+    <link rel="shortcut icon" href="img/favicon-16x16.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Lista de Usuários</title>
+</head>
+<body>
+  <a class="btn" href="/telaInicial"><img src="img/home.png" height="30" width="30" style="transform: translate(-36%, 94%);"></a>
+  <center><h1 style="font-size:20px; transform: translate(4%, -26%);">Sistema de</h1></center>
+  <center><h1 style="font-size:20px; transform: translate(4%, -26%);">Chamados</h1></center>
+  <a class="btn" href="/homeChamado"><img src="img/chamado.png" height="35" width="150"></a>
+  <a class="btn" href="/homeUsuario">Cadastrar Usuário</a>
+  <a class="btn" href="/listaUsuario"><img src="img/perfil.png" height="30" width="30"></a>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Usuário</th>
+            <th scope="col">Senha</th>
+            <th scope="col">CPF</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr data-th-each="usuarios: ${usuario}" data>
+                <td data-th-text="${usuarios.id}"></td>
+                <td data-th-text="${usuarios.nome}"></td>
+                <td data-th-text="${usuarios.usuari}"></td>
+                <td data-th-text="${usuarios.senha}"></td>
+                <td data-th-text="${usuarios.cpf}"></td> 
+            </tr>              
+        </tbody>        
+      </table>      
+      <a href="/telaInicial">Voltar</a>
+</body>
+</html>

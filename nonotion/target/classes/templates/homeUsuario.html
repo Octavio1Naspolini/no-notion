@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
+rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="cadastro.css">
+<title>Notion</title>
+</head>
+<body>
+<form method="POST" action="/homeUsuario">
+    <div th:if="${usuario}">
+        <input type="hidden" name="id" th:value="${usuario?.id}">
+    </div>
+    <div class="form-group">
+      <b><label for="formGroupExampleInput">Nome</label></b>
+      <input type="text" class="form-control" id="formGroupExampleInput" name="nome" th:value="${usuario?.nome}">
+    </div>
+    <div class="form-group">
+      <b><label for="formGroupExampleInput2">Email</label></b>
+      <input type="text" class="form-control" id="formGroupExampleInput2" name="email" th:value="${usuario?.email}">
+    </div> 
+    <div class="form-group">
+      <b><label for="formGroupExampleInput2">Senha</label></b>  
+      <input type="password" class="form-control" id="formGroupExampleInput2" name="senha" th:value="${usuario?.senha}">
+    </div> 
+
+    <div class="radio-group">
+      <div class="radio-list">
+          <b><label>Como você planeja usar o Notion?</label></b>
+          <div class="radio-custom" style="margin-top: 5px;">
+              <input type="radio" id="remember_userAUTOLOGIN" name="remember_user" value="AUTOLOGIN">
+              <label for="remember_userAUTOLOGIN">Para minha equipe</label>
+          </div>
+          <div class="radio-custom" style="margin-top: 5px;">
+              <input type="radio" id="remember_userJUSTUSER" name="remember_user" value="JUSTUSER" checked>
+              <label for="remember_userJUSTUSER">Para uso pessoal</label>
+          </div>
+          <div class="radio-custom" style="margin-top: 5px;">
+              <input type="radio" id="remember_userNOTHANKS" name="remember_user" value="NOTHANKS" >
+              <label for="remember_userNOTHANKS">Para instituição de ensino</label>
+          </div>
+      </div>
+  </div>
+      <p></p>    
+    <div>
+      <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </div>
+  </form>
+  </body>
+</html>

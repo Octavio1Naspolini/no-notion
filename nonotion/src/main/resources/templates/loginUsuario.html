@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <title>Notion</title>
+</head>
+<body>
+    <div id="box">
+        <div id="login-usuario">
+            <form method="post" action="/loginUsuario">
+                <div th:if="${usuario}">
+                    <input type="hidden" name="id" th:value="${usuario?.id}">
+                </div>
+                <h1>Fazer login</h1>
+                <label>Email</label>
+                <input class="input-dados" type="text" name="email" required>
+                <p></p>
+                <br>
+                <label>Senha</label>
+                <input class="input-dados" type="password" name="senha" required>
+                <p></p>
+                <br>
+                <button type="submit" id="botao">Clique aqui para entrar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
